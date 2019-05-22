@@ -39,7 +39,7 @@ import React from 'react'
 // export default Page
 
 
-import Header from '../component/header'
+import Header from '../../component/header'
 import FetchData from  './fetch-data'
 import Link from 'next/link'
 import Router from 'next/router'
@@ -64,11 +64,12 @@ export default class App extends React.Component{
     return (
       <div>
         <Header />
-        <FetchData />
         <p>
-          {/*<Link href={{pathname:'/about',query:{name:'next'}}}>
-            go to about page
-    </Link>*/}
+          <Link href={{pathname:'/fetch-data',query:{name:'next'}}}>
+            <a>go to fetch-data page</a>
+          </Link>
+        </p>
+        <p>
           <button onClick={this.handler}>hrer to go about</button>
         </p>
       </div>
